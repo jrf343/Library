@@ -1,0 +1,148 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background-color: lavender;
+}
+
+#heading {
+  font-variant: small-caps;
+  text-shadow: 1px 1px 2px skyblue, 3px 3px 6px skyblue;
+  color: darkred;
+  font-size: xx-large;
+}
+
+.library-cards{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, auto));
+    border-radius: 10px;
+    padding: 10px;
+    grid-gap: 5px;
+    background-color: darkred;
+}
+
+.library-cards > .newBook {
+    background-color: #2196F3;
+    border-radius: 10px;
+    padding: 10px;
+    color: darkred;
+    font-size: large;
+    position: relative;
+}
+
+.newBookTitle {
+  font-size: x-large;
+  font-variant: small-caps;
+}
+
+.newBookAuthor, .newBookPageNum {
+  font-style: italic;
+}
+
+.deleteButton {
+    background-color: firebrick;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: aliceblue;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.newBookReadStatus {
+    margin: 0 auto;
+}
+
+.label input {
+    display: none;
+}
+
+.label {
+    display: inline-block;
+    position: relative;
+    min-height: 30px;
+    min-width: 180px;
+    margin: 3px;
+}
+
+.slider {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top:0;
+    cursor: pointer;
+    padding: 3px;
+    transition: all .4s ease;
+    border-radius: 15px;
+    background-color: skyblue;
+    color: darkred;
+}
+
+.slider:before {
+    position: absolute;
+    height: calc(100% - 8px);
+    width: calc(100% - 100px);
+    bottom: 4px;
+    left: 8px;
+    background-color: whitesmoke;
+    transition: all .4s ease;
+    border-radius: 15px;
+    content: attr(unchecked);
+}
+
+input:checked + .slider {
+  background-color: darkred;
+}
+
+input:checked + .slider:before {
+  transform: translateX(82px);
+  content: attr(checked);
+}
+
+#new-book {
+  position: absolute;
+  top: 1;
+  left: 0;
+  margin: 10px;
+  font-size: x-large;
+  border-radius: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: skyblue;
+  color: darkred;
+}
+
+.form-display {
+  display: none;
+  
+}
+
+.form-popup {
+  position: absolute;
+  display: block;
+  left: 24%;
+  top: 4%;
+  margin-left: -202px;
+  background-color: skyblue;
+  border-radius: 10px;
+  z-index: 2;
+
+}
+
+form {
+    display: block;
+    max-width: 400px;
+    min-width: 300px;
+    padding: 10px;
+    border: 2px solid darkred;
+    border-radius: 10px;
+}
+
+input[type=text], input[type=number], select {
+    width: 90%;
+    padding: 10px;
+    margin: 8px;
+    display: inline-block;
+}

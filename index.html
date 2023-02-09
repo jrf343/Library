@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <button id="new-book">NEW BOOK</button>
+    <div class="form-display">
+        <div class="form-popup">
+            <form>
+                <h3>New Book Details: </h3>
+                <label for="book-title">Title:</label>
+                <input type="text" id="book-title" name="book-title">
+                <label for="book-author">Author:</label>
+                <input type="text" id="book-author" name="book-author">
+                <label for="book-pageNum">Page count:</label>
+                <input type="text" id="book-pageNum" name="book-pageNum">
+                <button type="submit" id="submit-button">Submit</button>
+            </form>
+        </div>
+    </div>
+    <h1 id="heading">Your Library</h1>
+    <div class="library-cards"></div>
+    <script src="bookapp.js"></script>
+</body>
+</html>
